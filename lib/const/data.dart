@@ -1,5 +1,4 @@
-const serviceKey =
-    'W4xgYF5CSNZPmdn6asB3i5XLCkLjPqQTey0ck2AbcvxZ3EtmjiV58JjhoyU0WV4aOqOuSzjXyRLqRo8kEp6img==';
+const serviceKey = 'api key here';
 const weatherWebUrl =
     'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst';
 
