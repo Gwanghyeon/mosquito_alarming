@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<int> fetchLevel() async {
-    Map<String, double> data;
+    Map<String, dynamic> data;
 
     if (region == '서울') {
       data = SEOUL_DATA;
@@ -128,6 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
     } else {
       data = JEJU_DATA;
     }
+
     const url = 'http://127.0.0.1:5000';
 
     await http.post(Uri.parse(url),
@@ -135,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
             json.encode({'temp': data['temp'], 'rainFall': data['rainFall']}));
     final response = await http.get(Uri.parse(url));
     final result = jsonDecode(response.body);
-    print(result['result']);
+
     return result['result'];
   }
 
